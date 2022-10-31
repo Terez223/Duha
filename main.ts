@@ -18,8 +18,9 @@ input.onButtonPressed(Button.AB, function () {
     strip3.show()
 })
 input.onButtonPressed(Button.B, function () {
-    strip.shift(1)
-    strip.showColor(neopixel.colors(NeoPixelColors.Green))
+    strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
+    strip2.showColor(neopixel.colors(NeoPixelColors.Yellow))
+    strip3.showColor(neopixel.colors(NeoPixelColors.Yellow))
     strip.show()
 })
 let strip3: neopixel.Strip = null
@@ -28,11 +29,11 @@ let strip: neopixel.Strip = null
 basic.showLeds(`
     . # # # .
     . # . # .
-    # . . . #
+    # . # . #
     . # . # .
     . # # # .
     `)
-strip = neopixel.create(DigitalPin.P0, 20, NeoPixelMode.RGB)
+strip = neopixel.create(DigitalPin.P0, 30, NeoPixelMode.RGB)
 strip.showRainbow(1, 360)
 strip2 = neopixel.create(DigitalPin.P1, 30, NeoPixelMode.RGB)
 strip2.showRainbow(1, 360)
